@@ -1,0 +1,59 @@
+site_name: Knowledge Hub
+nav:
+  - "Home": index.md
+  - Products:
+      - SharePoint Site:
+        - "About SharePoint": SharePoint-Site/About-SharePoint.md
+        - "Retail Recap": SharePoint-Site/Retail-Recap.md
+      - SharePoint Lists:
+        - "About SharePoint Lists": Sharepoint-Lists/About-SharePoint-Lists.md
+        - "Employee Records System": Sharepoint-Lists/EmployeeRecordsSystem.md
+  - "Progress on Documentation": andres-progress/AP-All-Progress.md
+
+
+theme:
+  name: material
+  logo: assets/Cornell-Store-Logo-White.png
+  favicon: images/favicon.png
+  icon:
+    annotation: material/arrow-right-circle 
+  custom_dir: overrides
+  features: 
+    - announce.dismiss
+    - navigation.tracking
+    - navigation.tabs
+    - content.code.copy
+  palette:
+    scheme: cornellstore
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+- admonition
+- pymdownx.details
+- attr_list
+- md_in_html
+- pymdownx.blocks.caption
+- md_in_html
+- pymdownx.superfences
+- pymdownx.emoji:
+    emoji_index: !!python/name:material.extensions.emoji.twemoji
+    emoji_generator: !!python/name:material.extensions.emoji.to_svg
+- pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+- pymdownx.inlinehilite
+- pymdownx.snippets
+- markdown_include.include:
+    base_path: docs/
+- pymdownx.tasklist:
+      custom_checkbox: true
+- pymdownx.tabbed:
+    alternate_style: true
+
+plugins:
+  - search
+  - include-markdown
+  - mkdocs-video
+  - macros

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Removal Notification</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F7F7F7;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .header {
+      background-color: #B31B1B;
+      color: #ffffff;
+      text-align: center;
+      padding: 15px;
+      border-radius: 8px 8px 0 0;
+      font-size: 20px;
+    }
+    .content {
+      padding: 20px;
+      color: #333333;
+      font-size: 15px;
+    }
+    .ticket-info {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-left: 4px solid #222222;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #888888;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    .button {
+      display: inline-block;
+      background-color: #B31B1B;
+      color: #ffffff;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .button:hover {
+      background-color: #A11A1A;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      Employee Removal Notification
+    </div>
+    <div class="content">
+      <p>Hello <strong>@{first(split(outputs('Get_record_that_has_been_modified')?['body/Supervisor/DisplayName'], ' '))}</strong>,</p>
+
+
+      <p><strong>Please remove the following employee from Microsoft Teams and any other relevant systems:</strong></p>
+
+      <div class="ticket-info">
+        <p><strong>Employee Name: </strong>@{outputs('Get_record_that_has_been_modified')?['body/Employee/DisplayName']}</p>
+        <p><strong>Employee Email:</strong> @{outputs('Get_record_that_has_been_modified')?['body/Employee/Email']}</p>
+        <p><strong>Microsoft Team:</strong> @{outputs('Get_record_that_has_been_modified')?['body/MSTeams/Value']}</p>
+        <p><strong>Locker:</strong> @{outputs('Get_record_that_has_been_modified')?['body/Locker']}</p>
+      </div>
+
+      <p>If you need guidance, you can follow Microsoft’s official instructions here:</p>
+      <p>
+        <a href="https://support.microsoft.com/en-us/office/remove-someone-from-a-team-in-microsoft-teams-91610d8b-c182-4cab-8f31-1ed8d3d316ee" target="_blank">
+          Remove Someone from a Team in Microsoft Teams
+        </a>
+      </p>
+
+      <p>If you have any questions or need additional support, please reply to this email.</p>
+
+    </div>
+    <div class="footer">
+      Cornell University | Cornell Retail Services System
+    </div>
+  </div>
+
+</body>
+</html>
