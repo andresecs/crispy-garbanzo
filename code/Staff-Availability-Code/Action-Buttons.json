@@ -1,0 +1,316 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "elmType": "div",
+    "style": {
+      "display": "flex",
+      "gap": "8px",
+      "justify-content": "center",
+      "align-items": "center",
+      "border-radius": "25px"
+    },
+    "children": [
+      {
+        "elmType": "span",
+        "customRowAction": {
+          "action": "delete"
+        },
+        "style": {
+          "color": "#B31B1B",
+          "display": "=if([$SupervisorStatus]!='Inactive', '', 'none')",
+          "border-radius": "25px",
+          "cursor": "pointer",
+          "font-size": "16px",
+          "font-weight": "1000",
+          "align-items": "center",
+          "justify-content": "center"
+        },
+        "attributes": {
+          "iconName": "Delete"
+        }
+      },
+      {
+        "elmType": "span",
+        "customRowAction": {
+            "action": "editProps"
+        },
+        "style": {
+          "color": "#222222",
+          "border-radius": "25px",
+          "cursor": "pointer",
+          "font-size": "16px",
+          "font-weight": "800",
+          "align-items": "center",
+          "justify-content": "center"
+        },
+        "attributes": {
+          "iconName": "Edit"
+        }
+      },
+      {
+        "elmType": "span",
+        "customRowAction": {
+          "action": "setValue",
+          "actionInput": {
+            "EmployeeStatus": "Draft",
+            "SupervisorStatus": "Returned",
+            "ReturnRate": "=[$ReturnRate] + 1"
+          }
+        },
+        "style": {
+          "color": "#006699",
+          "display": "=if([$EmployeeStatus] != 'Draft' , '', 'none')",
+          "border-radius": "25px",
+          "cursor": "pointer",
+          "font-size": "16px",
+          "font-weight": "800",
+          "align-items": "center",
+          "justify-content": "center"
+        },
+        "attributes": {
+          "iconName": "SkypeCircleArrow"
+        }
+      },
+      {
+        "elmType": "span",
+        "customRowAction": {
+          "action": "setValue",
+          "actionInput": {
+            "SupervisorStatus": "Active"
+          }
+        },
+        "style": {
+          "color": "#F8981D",
+          "display": "=if([$EmployeeStatus] != 'Draft' && [$SupervisorStatus] != 'Active', '', 'none')",
+          "border-radius": "25px",
+          "cursor": "pointer",
+          "font-size": "16px",
+          "font-weight": "1000",
+          "align-items": "center",
+          "justify-content": "center"
+        },
+        "attributes": {
+          "iconName": "LocationDot"
+        }
+      }
+    ],
+    "customCardProps": {
+      "formatter": {
+        "elmType": "div",
+        "children": [
+          {
+            "elmType": "div",
+            "children": [
+              {
+                "elmType": "div",
+                "style": {
+                  "padding": "15px 45px 15px 15px"
+                },
+                "children": [
+                  {
+                    "elmType": "div",
+                    "children": [
+                      {
+                        "elmType": "span",
+                        "style": {
+                          "font-size": "16px",
+                          "font-weight": "600",
+                          "padding-left": "15px",
+                          "color": "#B31B1B"
+                        },
+                        "txtContent": " ",
+                        "attributes": {
+                          "iconName": "Delete"
+                        }
+                      },
+                      {
+                        "elmType": "span",
+                        "style": {
+                          "font-size": "16px",
+                          "font-weight": "600",
+                          "padding-left": "9px",
+                          "color": "#B31B1B"
+                        },
+                        "txtContent": "Delete Submission"
+                      },
+                      {
+                        "elmType": "div",
+                        "style": {
+                          "margin-left": "40px",
+                          "margin-top": "5px",
+                          "margin-bottom": "10px"
+                        },
+                        "children": [
+                          {
+                            "elmType": "span",
+                            "style": {
+                              "font-size": "12px",
+                              "color": "#666666",
+                              "font-style": "italic"
+                            },
+                            "txtContent": "Deletes the employee's submission of availability. Does not send notification."
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elmType": "div",
+                    "children": [
+                      {
+                        "elmType": "span",
+                        "style": {
+                          "font-size": "16px",
+                          "font-weight": "600",
+                          "padding-left": "15px",
+                          "color": "#222222"
+                        },
+                        "txtContent": " ",
+                        "attributes": {
+                          "iconName": "Edit"
+                        }
+                      },
+                      {
+                        "elmType": "span",
+                        "style": {
+                          "font-size": "16px",
+                          "font-weight": "600",
+                          "padding-left": "9px",
+                          "color": "#222222"
+                        },
+                        "txtContent": "Edit Availability Submissions"
+                      },
+                      {
+                        "elmType": "div",
+                        "style": {
+                          "margin-left": "40px",
+                          "margin-top": "5px",
+                          "margin-bottom": "10px"
+                        },
+                        "children": [
+                          {
+                            "elmType": "span",
+                            "style": {
+                              "font-size": "12px",
+                              "color": "#666666",
+                              "font-style": "italic"
+                            },
+                            "txtContent": "Edit the employee's Submission."
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elmType": "div",
+                    "children": [
+                      {
+                        "elmType": "span",
+                        "style": {
+                          "font-size": "16px",
+                          "font-weight": "600",
+                          "padding-left": "15px",
+                          "color": "#006699"
+                        },
+                        "txtContent": " ",
+                        "attributes": {
+                          "iconName": "SkypeCircleArrow"
+                        }
+                      },
+                      {
+                        "elmType": "span",
+                        "style": {
+                          "font-size": "16px",
+                          "font-weight": "600",
+                          "padding-left": "9px",
+                          "color": "#006699"
+                        },
+                        "txtContent": "Return to Employee"
+                      },
+                      {
+                        "elmType": "div",
+                        "style": {
+                          "margin-left": "40px",
+                          "margin-top": "5px",
+                          "margin-bottom": "10px"
+                        },
+                        "children": [
+                          {
+                            "elmType": "span",
+                            "style": {
+                              "font-size": "12px",
+                              "color": "#666666",
+                              "font-style": "italic"
+                            },
+                            "txtContent": "Returns the submission to the employee to make modifications."
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elmType": "div",
+                    "children": [
+                      {
+                        "elmType": "span",
+                        "style": {
+                          "font-size": "16px",
+                          "font-weight": "600",
+                          "padding-left": "15px",
+                          "color": "#F8981D"
+                        },
+                        "txtContent": " ",
+                        "attributes": {
+                          "iconName": "LocationDot"
+                        }
+                      },
+                      {
+                        "elmType": "span",
+                        "style": {
+                          "font-size": "16px",
+                          "color": "#F8981D",
+                          "font-weight": "600",
+                          "padding-left": "9px"
+                        },
+                        "txtContent": "New Submission"
+                      },
+                      {
+                        "elmType": "div",
+                        "style": {
+                          "margin-left": "40px",
+                          "margin-top": "5px",
+                          "margin-bottom": "10px"
+                        },
+                        "children": [
+                          {
+                            "elmType": "span",
+                            "style": {
+                              "font-size": "12px",
+                              "color": "#666666",
+                              "font-style": "italic"
+                            },
+                            "txtContent": "Returned submission from the employee."
+                          },
+                          {
+                            "elmType": "span",
+                            "style": {
+                              "font-size": "12px",
+                              "color": "#666666",
+                              "font-weight": "800"
+                            },
+                            "txtContent": "\nClick to confirm the submission."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "openOnEvent": "hover",
+      "directionalHint": "bottomCenter",
+      "isBeakVisible": true
+    }
+  }

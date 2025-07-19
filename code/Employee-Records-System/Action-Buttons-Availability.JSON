@@ -1,0 +1,144 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/tile-formatting.schema.json",
+    "hideSelection": true,
+    "height": 120,
+    "width": 350,
+    "groupProps": {
+      "headerFormatter": {
+        "elmType": "div",
+        "style": {
+          "border-left": "10px solid",
+          "border-color": "#B31B1B",
+          "display": "flex",
+          "flex-direction": "row",
+          "width": "98%",
+          "height": "30px",
+          "margin-top": "10px",
+          "margin-bottom": "10px",
+          "background-color": "#F7F7F7"
+        },
+        "children": [
+          {
+            "elmType": "span",
+            "txtContent": "@group.fieldData.displayValue",
+            "style": {
+              "padding-left": "15px",
+              "font-size": "14px",
+              "padding-right": "4px"
+            }
+          },
+          {
+            "elmType": "span",
+            "txtContent": "= ' (' + @group.count + ')'",
+            "style": {
+              "font-size": "14px",
+              "padding-right": "10px"
+            }
+          }
+        ]
+      }
+    },
+    "formatter": {
+      "elmType": "div",
+      "txtContent": "",
+      "style": {
+        "display": "flex",
+        "flex-direction": "row",
+        "align-items": "center",
+        "justify-content": "space-between",
+        "width": "330px",
+        "height": "auto",
+        "box-shadow": "0 2px 6px rgba(0,0,0,0.1)",
+        "border": "none",
+        "border-radius": "12px",
+        "cursor": "default",
+        "text-decoration": "none",
+        "margin": "10px",
+        "background-color": "#FAFAFA",
+        "padding": "16px",
+        "position": "relative"
+      },
+      "children": [
+        {
+          "elmType": "div",
+          "style": {
+            "display": "flex",
+            "flex-direction": "column",
+            "align-items": "flex-start",
+            "flex-grow": "1"
+          },
+          "children": [
+            {
+              "elmType": "div",
+              "style": {
+                "font-size": "16px",
+                "letter-spacing": "0.25px",
+                "color": "#222222",
+                "font-weight": "700",
+                "margin-bottom": "8px"
+              },
+              "txtContent": "[$Title]",
+              "attributes": {
+                "class": "ms-fontWeight-bold"
+              }
+            },
+            {
+              "elmType": "span",
+              "style": {
+                "background-color": "=if([$Listserv] == 'Full Time', '#d4edda', if([$Listserv] == 'Part Time', '#fff3cd', '#cce5ff'))",
+                "color": "=if([$Listserv] == 'Full Time', '#155724', if([$Listserv] == 'Part Time', '#856404', '#004085'))",
+                "padding": "2px 12px",
+                "border-radius": "12px",
+                "font-size": "11px",
+                "font-weight": "500",
+                "text-transform": "uppercase",
+                "letter-spacing": "0.5px",
+                "margin-bottom": "6px"
+              },
+              "txtContent": "[$Listserv]"
+            },
+            {
+              "elmType": "div",
+              "style": {
+                "font-size": "12px",
+                "color": "#666666",
+                "font-weight": "400",
+                "letter-spacing": "0.5px",
+                "padding-left": "5px"
+              },
+              "txtContent": "= 'Last Notified: ' + if(Number([$AvailabilityReminderSent]) == 0, 'Never', toLocaleDateString([$AvailabilityReminderSent]))"
+            }
+          ]
+        },
+        {
+          "elmType": "span",
+          "customRowAction": {
+            "action": "setValue",
+            "actionInput": {
+              "AvailabilityReminderSent": "@now"
+            }
+          },
+          "style": {
+            "color": "#073949",
+            "border": "1px solid #073949",
+            "background-color": "transparent",
+            "border-radius": "50%",
+            "cursor": "pointer",
+            "font-size": "12px",
+            "font-weight": "600",
+            "width": "32px",
+            "height": "32px",
+            "display": "flex",
+            "align-items": "center",
+            "justify-content": "center",
+            "transition": "all 0.2s ease",
+            "flex-shrink": "0"
+          },
+          "attributes": {
+            "iconName": "RingerSolid",
+            "title": "Send Availability Reminder"
+          }
+        }
+      ]
+    }
+  }
