@@ -1,0 +1,41 @@
+Employee Records System
+[ ] CRS Employee Records System
+    + might have to fix receiving avilability reminders over and over again
+    + Add something column for "Receive Daily Shifts Notifications"
+[X] Deleting 6 Month Old Records [DELETE]
+    + Moved to Remove Old Announcements and Shortcuts
+
+Staff Availability
+[ ] CRS Availability Updates
+[X] CRS Employee Records System (only part where sends availability reminder)
+
+Shoutouts
+[ ] Employee Shoutout Request
+[ ] CRS Manual Shoutouts
+[ ] Shoutout Message on Teams
+[ ] Remove Old Announcements and Shortcuts
+[ ] Shoutouts
+
+Announcements
+[ ] Immediate Announcements Channel Post
+[ ] Scheduled Announcements Channel Post
+[X] Remove Old Announcements and Shortcuts
+
+Radio Assignments
+[ ] Radio Assigned
+
+
+Shifts
+[ ] Daily Schedule for OF and Art & Supplies [DELETE]
+[ ] Custom Schedule Print
+[ ] CRS Daily Schedule
+
+Lost & Found
+[ ] Lost & Found
+
+Last Day
+[ ] Last Day Update
+
+notes:
+* deactivate table of contents (let ryan know)
+* need to fix custom shift prints
