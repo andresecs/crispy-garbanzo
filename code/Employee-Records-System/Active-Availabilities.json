@@ -1,0 +1,40 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/view-formatting.schema.json",
+    "hideSelection": true,
+    "selectionMode": "none",
+    "groupProps": {
+      "headerFormatter": {
+        "elmType": "div",
+        "style": {
+          "border-left": "10px solid",
+          "border-color": "#006699",
+          "display": "flex",
+          "flex-direction": "row",
+          "width": "98%",
+          "height": "40px",
+          "margin-top": "5px",
+          "margin-bottom": "10px",
+          "background-color": "#F7F7F7"
+        },
+        "children": [
+          {
+            "elmType": "span",
+            "txtContent": "@group.fieldData.displayValue",
+            "style": {
+              "padding-left": "10px",
+              "font-size": "16px",
+              "padding-right": "5px"
+            }
+          },
+          {
+            "elmType": "span",
+            "txtContent": "= ' (' + @group.count + ')'",
+            "style": {
+              "font-size": "16px",
+              "padding-right": "5px"
+            }
+          }
+        ]
+      }
+    }
+  }

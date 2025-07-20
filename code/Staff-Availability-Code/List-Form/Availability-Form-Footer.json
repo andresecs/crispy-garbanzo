@@ -1,0 +1,213 @@
+{
+    "elmType": "div",
+    "style": {
+        "display": "flex",
+        "flex-wrap": "wrap",
+        "flex-direction": "row",
+        "justify-content": "space-evenly",
+        "width": "100%"
+    },
+    "attributes": {
+        "class": "ms-fontSize-18"
+    },
+    "children": [
+        {
+            "elmType": "div",
+            "style": {
+                "display": "flex",
+                "flex-direction": "column",
+                "align-items": "center",
+                "margin": "20px",
+                "white-space": "nowrap"
+            },
+            "children": [
+                {
+                    "elmType": "div",
+                    "txtContent": "Monday",
+                    "style": {
+                        "margin-bottom": "10px"
+                    }
+                },
+                {
+                    "elmType": "div",
+                    "style": {
+                        "margin-bottom": "10px"
+                    },
+                    "attributes": {
+                        "iconName": "=if([$MondayAvailability] == '', 'StatusErrorFull', 'CompletedSolid')",
+                        "class": "='ms-fontSize-42' + if([$MondayAvailability] == '' ,' ms-fontColor-neutralTertiary' , ' ms-fontColor-success')"
+                    }
+                },
+                {
+                    "elmType": "div",
+                    "txtContent": "=if([$MondayAvailability] == '', 'Not Available', [$MondayAvailability])"
+                }
+            ]
+        },
+        {
+            "elmType": "div",
+            "style": {
+                "display": "flex",
+                "flex-direction": "column",
+                "align-items": "center",
+                "margin": "20px",
+                "white-space": "nowrap"
+            },
+            "children": [
+                {
+                    "elmType": "div",
+                    "txtContent": "Monday",
+                    "style": {
+                        "margin-bottom": "10px"
+                    }
+                },
+                {
+                    "elmType": "div",
+                    "style": {
+                        "margin-bottom": "10px"
+                    },
+                    "attributes": {
+                        "iconName": "=if([$TuesdayAvailability] == '', 'StatusErrorFull', 'CompletedSolid')",
+                        "class": "='ms-fontSize-42' + if([$TuesdayAvailability] == '' ,' ms-fontColor-neutralTertiary' , ' ms-fontColor-success')"
+                    }
+                },
+                {
+                    "elmType": "div",
+                    "txtContent": "=if([$TuesdayAvailability] == '', 'Not Available', [$TuesdayAvailability])"
+                }
+            ]
+        },
+        {
+            "elmType": "div",
+            "style": {
+                "display": "flex",
+                "flex-direction": "column",
+                "align-items": "center",
+                "margin": "20px",
+                "white-space": "nowrap"
+            },
+            "children": [
+                {
+                    "elmType": "div",
+                    "txtContent": "Monday",
+                    "style": {
+                        "margin-bottom": "10px"
+                    }
+                },
+                {
+                    "elmType": "div",
+                    "style": {
+                        "margin-bottom": "10px"
+                    },
+                    "attributes": {
+                        "iconName": "=if([$WednesdayAvailability] == '', 'StatusErrorFull', 'CompletedSolid')",
+                        "class": "='ms-fontSize-42' + if([$WednesdayAvailability] == '' ,' ms-fontColor-neutralTertiary' , ' ms-fontColor-success')"
+                    }
+                },
+                {
+                    "elmType": "div",
+                    "txtContent": "=if([$WednesdayAvailability] == '', 'Not Available', [$WednesdayAvailability])"
+                }
+            ]
+        },
+        {
+            "elmType": "div",
+            "style": {
+                "display": "flex",
+                "flex-direction": "column",
+                "align-items": "center",
+                "margin": "20px",
+                "white-space": "nowrap"
+            },
+            "children": [
+                {
+                    "elmType": "div",
+                    "txtContent": "Monday",
+                    "style": {
+                        "margin-bottom": "10px"
+                    }
+                },
+                {
+                    "elmType": "div",
+                    "style": {
+                        "margin-bottom": "10px"
+                    },
+                    "attributes": {
+                        "iconName": "=if([$ThursdayAvailability] == '', 'StatusErrorFull', 'CompletedSolid')",
+                        "class": "='ms-fontSize-42' + if([$ThursdayAvailability] == '' ,' ms-fontColor-neutralTertiary' , ' ms-fontColor-success')"
+                    }
+                },
+                {
+                    "elmType": "div",
+                    "txtContent": "=if([$ThursdayAvailability] == '', 'Not Available', [$ThursdayAvailability])"
+                }
+            ]
+        },
+        {
+            "elmType": "div",
+            "style": {
+                "display": "flex",
+                "flex-direction": "column",
+                "align-items": "center",
+                "margin": "20px",
+                "white-space": "nowrap"
+            },
+            "children": [
+                {
+                    "elmType": "div",
+                    "txtContent": "Monday",
+                    "style": {
+                        "margin-bottom": "10px"
+                    }
+                },
+                {
+                    "elmType": "div",
+                    "style": {
+                        "margin-bottom": "10px"
+                    },
+                    "attributes": {
+                        "iconName": "=if([$FridayAvailability] == '', 'StatusErrorFull', 'CompletedSolid')",
+                        "class": "='ms-fontSize-42' + if([$FridayAvailability] == '' ,' ms-fontColor-neutralTertiary' , ' ms-fontColor-success')"
+                    }
+                },
+                {
+                    "elmType": "div",
+                    "txtContent": "=if([$FridayAvailability] == '', 'Not Available', [$FridayAvailability])"
+                }
+            ]
+        },
+        {
+            "elmType": "div",
+            "style": {
+                "display": "flex",
+                "flex-direction": "column",
+                "align-items": "center",
+                "margin": "20px",
+                "white-space": "nowrap"
+            },
+            "children": [
+                {
+                    "elmType": "div",
+                    "txtContent": "Monday",
+                    "style": {
+                        "margin-bottom": "10px"
+                    }
+                },
+                {
+                    "elmType": "div",
+                    "style": {
+                        "margin-bottom": "10px"
+                    },
+                    "attributes": {
+                        "iconName": "=if([$SaturdayAvailability] == '', 'StatusErrorFull', 'CompletedSolid')",
+                        "class": "='ms-fontSize-42' + if([$SaturdayAvailability] == '' ,' ms-fontColor-neutralTertiary' , ' ms-fontColor-success')"
+                    }
+                },
+                {
+                    "elmType": "div",
+                    "txtContent": "=if([$SaturdayAvailability] == '', 'Not Available', [$SaturdayAvailability])"
+                }
+            ]
+        }
+    ]
+}

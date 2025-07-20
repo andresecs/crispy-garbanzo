@@ -67,6 +67,7 @@ font-style: normal;
     font-family: 'Freight Sans Header 2', sans-serif;
 }
 .md-typeset h3,
-.md-typeset h4 {
+.md-typeset h4,
+.md-typeset h5 {
     font-family: 'Freight Sans Header 3', sans-serif;
 }
